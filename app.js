@@ -1,1 +1,3 @@
-require('http').createServer(require('serve-static')('.')).listen(5000)
+var connect = require('connect');
+var serveStatic = require('serve-static');
+connect().use(serveStatic(__dirname)).listen(5000);
